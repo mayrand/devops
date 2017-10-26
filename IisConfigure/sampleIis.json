@@ -1,0 +1,28 @@
+{
+	"AppPools": [{
+		"Name": "pulaTestowa",
+		"NetVersion": "v4.0"
+	}, {
+		"Name": "pulaTestowaV2",
+		"NetVersion": "v2.0"
+	}],
+	"Websites": [{
+		"Name": "stronaTestowa",
+		"AppPoolName": "pulaTestowa",
+		"Path": "C:\\temp\\stronaTestowa",
+		"Bindings": [{
+			"Protocol": "http",
+			"Port": "8080",
+			"IPAddress": "10.222.1.48"
+		}, {
+			"Protocol": "https",
+			"Port": "443",
+			"IPAddress": "10.222.1.48"
+		}],
+        "Apps": [{
+            "Url": "/apkaTestowa",
+            "AppPoolName": "pulaTestowa",
+            "Path": "C:\\temp\\stronaTestowa\\apkaTestowa"
+        }]
+	}]
+}
